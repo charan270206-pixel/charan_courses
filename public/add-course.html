@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CHARAN | Add Course</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header class="topbar">
+ <div class="navwrap">
+  <a class="brand" href="index.html"><span class="brandmark">C</span><span>CHARAN<br><small style="font-weight:500;opacity:.78">Course Registration</small></span></a>
+  <nav class="navlinks">
+   <a href="index.html" data-nav="home">Home</a>
+   <div class="dropdown"><button class="dropbtn" type="button">Students ▾</button><div class="dropmenu"><a href="students.html">View Students</a><a href="students.html#student-form">Add Student</a></div></div>
+   <div class="dropdown"><button class="dropbtn" type="button">Courses ▾</button><div class="dropmenu"><a href="courses.html">View All Courses</a><a href="add-course.html">Add New Course</a></div></div>
+   <div class="dropdown"><button class="dropbtn" type="button">Registration ▾</button><div class="dropmenu"><a href="registrations.html">View Registrations</a><a href="registrations.html#registration-form">New Registration</a></div></div>
+   <a href="about.html" data-nav="about">About</a><a href="contact.html" data-nav="contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main class="container"><header class="pagehead"><div class="crumb">Home / Courses / Add New Course</div><h1>Add a new course</h1><p>Create a course and it will appear in the course catalog and registration dropdown.</p></header><div class="content-grid"><section class="panel"><h2 id="course-form-title">Course details</h2><div id="course-message" class="message"></div><form id="course-form"><input type="hidden" id="course-id"><div class="field"><label for="course_name">Course name *</label><input id="course_name" required placeholder="e.g. UI/UX Design"></div><div class="field"><label for="course_code">Course code *</label><input id="course_code" required placeholder="e.g. UIUX01"></div><div class="field"><label for="duration">Duration *</label><select id="duration" required><option value="">Choose duration</option><option>1 Month</option><option>2 Months</option><option>3 Months</option><option>4 Months</option><option>6 Months</option><option>1 Year</option></select></div><div class="field"><label for="fee">Course fee (₹) *</label><input id="fee" type="number" min="0" step="0.01" required placeholder="e.g. 9500"></div><div class="form-actions"><button class="btn primary" type="submit" id="course-submit">Save Course</button><button class="btn secondary" type="button" id="course-cancel" hidden>Cancel Edit</button></div></form></section><section class="panel"><h2>Course catalog</h2><p style="color:var(--muted);font-size:14px;line-height:1.7">Your saved courses are listed here. Use Edit to update a course or Delete to remove it. Existing registrations linked to a deleted course will also be removed.</p><div class="table-scroll"><table><thead><tr><th>Course</th><th>Code</th><th>Duration</th><th>Fee</th><th>Actions</th></tr></thead><tbody id="courses-table"><tr><td colspan="5" class="empty">Loading courses…</td></tr></tbody></table></div></section></div></main>
+<script src="js/add-course.js"></script>
+<footer class="footer"><div class="footer-inner"><span>© 2026 CHARAN Student Course Registration System</span><span>Made for learning · Node.js + MySQL 8</span></div></footer>
+<script src="js/common.js"></script>
+</body></html>

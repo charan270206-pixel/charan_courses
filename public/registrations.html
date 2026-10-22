@@ -1,0 +1,174 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CHARAN | Registrations</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="navwrap">
+        <a class="brand" href="index.html">
+            <span class="brandmark">C</span>
+            <span>
+                CHARAN<br>
+                <small style="font-weight:500;opacity:.78">
+                    Course Registration
+                </small>
+            </span>
+        </a>
+
+        <nav class="navlinks">
+            <a href="index.html" data-nav="home">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Students ▾</button>
+                <div class="dropmenu">
+                    <a href="students.html">View Students</a>
+                    <a href="students.html#student-form">Add Student</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Courses ▾</button>
+                <div class="dropmenu">
+                    <a href="courses.html">View All Courses</a>
+                    <a href="add-course.html">Add New Course</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Registration ▾</button>
+                <div class="dropmenu">
+                    <a href="registrations.html">View Registrations</a>
+                    <a href="registrations.html#registration-form">
+                        New Registration
+                    </a>
+                </div>
+            </div>
+
+            <a href="about.html" data-nav="about">About</a>
+            <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <header class="pagehead">
+        <div class="crumb">Home / Registration</div>
+        <h1>Course registrations</h1>
+        <p>
+            Match a student with a course and save the registration
+            to the database.
+        </p>
+    </header>
+
+    <div class="content-grid">
+
+        <!-- NEW REGISTRATION FORM -->
+        <section class="panel" id="registration-form">
+
+            <h2>New registration</h2>
+
+            <div id="registration-message" class="message"></div>
+
+            <form id="registration-form-el">
+
+                <div class="field">
+                    <label for="student-select">Choose student *</label>
+
+                    <select id="student-select" required>
+                        <option value="">Loading students…</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="course-select">Choose course *</label>
+
+                    <select id="course-select" required>
+                        <option value="">Loading courses…</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="registration-date">Registration date</label>
+                    <input
+                        id="registration-date"
+                        value="Today (auto)"
+                        disabled
+                    >
+                </div>
+
+                <button class="btn primary" type="submit">
+                    Complete Registration →
+                </button>
+
+            </form>
+
+            <p style="font-size:12px;color:var(--muted);line-height:1.6;margin-top:16px">
+                Note: Add at least one student and one course before
+                creating a registration.
+            </p>
+
+        </section>
+
+        <!-- REGISTRATION TABLE -->
+        <section class="panel">
+
+            <div class="tabletop">
+                <h2>Recent registrations</h2>
+
+                <input
+                    class="search"
+                    id="registration-search"
+                    placeholder="Search records…"
+                    type="search"
+                >
+            </div>
+
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Course</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="registrations-table">
+                        <tr>
+                            <td colspan="4" class="empty">
+                                Loading registrations…
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <span>© 2026 CHARAN Student Course Registration System</span>
+        <span>Made for learning · Node.js + MySQL 8</span>
+    </div>
+</footer>
+
+<!-- IMPORTANT: Load common.js BEFORE registrations.js -->
+<script src="js/common.js"></script>
+<script src="js/registrations.js"></script>
+
+</body>
+</html>

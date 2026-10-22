@@ -1,0 +1,1 @@
+document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();showMessage('contact-message','Thanks! This demo does not send email yet. Your message is ready to copy or you can connect an email service later.','ok');});
